@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #0b0c0e;
+  --color-bone: #ece7dc;
+  --color-mute: #9a958a;
+  --color-signal: #d4ff3d;
+  --color-brew: #e8a54b;
+  --color-fog: #1a1f18;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, monospace;
+  --animate-rise: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-rise-delay-1: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+  --animate-rise-delay-2: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+  --animate-rise-delay-3: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.36s both;
+  --animate-drift: drift 7s ease-in-out infinite;
+  --animate-pulse-soft: pulseSoft 4s ease-in-out infinite;
+  --animate-draw-line: drawLine 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes drawLine {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+body {
+  background: #0b0c0e;
+  color: #ece7dc;
+}
