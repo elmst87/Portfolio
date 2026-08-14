@@ -13,14 +13,14 @@ export default function WebsiteTutorialPage() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-40 mix-blend-difference">
+      <header className="fixed inset-x-0 top-0 z-40 bg-black">
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8"
           aria-label="Primary"
         >
           <Link
             href="/"
-            className="font-mono text-xs uppercase tracking-[0.22em] text-bone transition hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+            className="font-mono text-xs uppercase tracking-[0.22em] text-white transition hover:text-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             tabIndex={0}
             aria-label="Kyle home"
           >
@@ -29,13 +29,13 @@ export default function WebsiteTutorialPage() {
           <div className="flex items-center gap-6 font-mono text-xs uppercase tracking-[0.18em]">
             <Link
               href="/get-a-website"
-              className="text-bone/80 transition hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+              className="text-white transition hover:text-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               tabIndex={0}
               aria-label="Request a website"
             >
               Request
             </Link>
-            <span className="text-signal" aria-current="page">
+            <span className="text-white" aria-current="page">
               Tutorial
             </span>
           </div>

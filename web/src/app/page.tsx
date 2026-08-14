@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import {HeroBackground} from '@/components/HeroBackground'
 import {ProjectsSection} from '@/components/ProjectsSection'
 
 export default function HomePage() {
@@ -24,14 +25,14 @@ export default function HomePage() {
         }}
       />
 
-      <header className="fixed inset-x-0 top-0 z-40 mix-blend-difference">
+      <header className="fixed inset-x-0 top-0 z-40 bg-black">
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8"
           aria-label="Primary"
         >
           <a
             href="#top"
-            className="font-mono text-xs uppercase tracking-[0.22em] text-bone transition hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+            className="font-mono text-xs uppercase tracking-[0.22em] text-white transition hover:text-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             tabIndex={0}
             aria-label="Kyle home"
           >
@@ -40,7 +41,7 @@ export default function HomePage() {
           <div className="flex items-center gap-6 font-mono text-xs uppercase tracking-[0.18em]">
             <a
               href="#work"
-              className="text-bone/80 transition hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+              className="text-white transition hover:text-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               tabIndex={0}
               aria-label="View work"
             >
@@ -48,7 +49,7 @@ export default function HomePage() {
             </a>
             <Link
               href="/get-a-website/"
-              className="text-bone/80 transition hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+              className="text-white transition hover:text-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               tabIndex={0}
               aria-label="Get a website"
             >
@@ -56,11 +57,21 @@ export default function HomePage() {
             </Link>
             <a
               href="#contact"
-              className="text-bone/80 transition hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+              className="text-white transition hover:text-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               tabIndex={0}
               aria-label="Contact"
             >
               Contact
+            </a>
+            <a
+              href="https://x.com/EndlessUndead_"
+              className="text-white transition hover:text-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              tabIndex={0}
+              aria-label="Endless Undead on X"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              X
             </a>
           </div>
         </nav>
@@ -71,11 +82,7 @@ export default function HomePage() {
           className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden px-5 pb-16 pt-28 md:px-8 md:pb-20"
           aria-labelledby="hero-name"
         >
-          <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_10%,rgba(212,255,61,0.12),transparent_45%),radial-gradient(ellipse_at_85%_70%,rgba(26,45,28,0.9),transparent_50%),linear-gradient(180deg,#12140f_0%,#0b0c0e_55%,#0b0c0e_100%)]" />
-            <div className="absolute -right-16 top-24 h-72 w-72 animate-drift rounded-full bg-signal/10 blur-3xl md:h-[28rem] md:w-[28rem]" />
-            <div className="absolute bottom-24 left-1/4 h-40 w-40 animate-pulse-soft rounded-full bg-brew/10 blur-3xl" />
-          </div>
+          <HeroBackground />
 
           <div className="relative mx-auto w-full max-w-7xl">
             <p className="mb-6 animate-rise font-mono text-xs uppercase tracking-[0.28em] text-mute">
@@ -87,12 +94,7 @@ export default function HomePage() {
             >
               Kyle
             </h1>
-            <p className="mt-8 max-w-xl animate-rise-delay-2 text-lg leading-relaxed text-mute md:text-xl">
-              I ship playable worlds and useful products — currently{' '}
-              <span className="text-bone">Endless Undead</span> and{' '}
-              <span className="text-bone">AllBrewRecipes</span>.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4 animate-rise-delay-3">
+            <div className="mt-10 flex flex-wrap items-center gap-4 animate-rise-delay-2">
               <a
                 href="#work"
                 className="group inline-flex items-center gap-3 bg-signal px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-ink transition hover:bg-bone focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
@@ -113,6 +115,16 @@ export default function HomePage() {
                 rel="noopener noreferrer"
               >
                 Play Endless Undead
+              </a>
+              <a
+                href="https://x.com/EndlessUndead_"
+                className="font-mono text-xs uppercase tracking-[0.18em] text-mute underline-offset-4 transition hover:text-signal hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                tabIndex={0}
+                aria-label="Endless Undead on X"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Endless Undead on X
               </a>
             </div>
             <div
@@ -148,6 +160,16 @@ export default function HomePage() {
                 aria-label="Email elmst87 at gmail.com"
               >
                 elmst87@gmail.com
+              </a>
+              <a
+                href="https://x.com/EndlessUndead_"
+                className="inline-flex items-center gap-2 border-b border-bone/30 pb-1 text-sm font-semibold uppercase tracking-[0.14em] transition hover:border-signal hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                tabIndex={0}
+                aria-label="Endless Undead on X"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @EndlessUndead_
               </a>
             </div>
           </div>
