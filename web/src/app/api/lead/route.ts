@@ -87,7 +87,7 @@ export async function POST(request: Request) {
       : '<li>None provided</li>'
 
   const html = `
-    <h2>New website lead</h2>
+    <h2>New mockup request</h2>
     <p><strong>Name:</strong> ${escapeHtml(body.name.trim())}</p>
     <p><strong>Business:</strong> ${escapeHtml(body.business.trim())}</p>
     <p><strong>Email:</strong> ${escapeHtml(body.email.trim())}</p>
@@ -106,7 +106,7 @@ export async function POST(request: Request) {
       from: fromEmail,
       to: toEmail,
       replyTo: body.email.trim(),
-      subject: `New website lead: ${body.business.trim()}`,
+      subject: `New mockup request: ${body.business.trim()}`,
       html,
     })
 

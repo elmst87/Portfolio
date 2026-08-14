@@ -5,7 +5,7 @@ import {LeadForm} from '@/components/LeadForm'
 export const metadata: Metadata = {
   title: 'Get a website — Kyle',
   description:
-    'Request a website setup for your small business. I’ll email you the tutorial and next steps.',
+    'Request a website mockup for your small business. Tell me about your business and I’ll send a mockup and next steps.',
 }
 
 export default function GetAWebsitePage() {
@@ -65,9 +65,9 @@ export default function GetAWebsitePage() {
             Tell me about your business
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-mute">
-            Fill this out and I’ll email you the setup tutorial — domain,
-            hosting, accounts, and optional Sanity — plus next steps for your
-            site.
+            Fill this out and I’ll put together a mockup for your business —
+            something you can review before we commit to building the real site.
+            Setup tutorials come later, once you’re locked in.
           </p>
         </div>
 

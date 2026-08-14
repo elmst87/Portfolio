@@ -89,7 +89,7 @@ export const LeadForm = () => {
     const isStaticExport = process.env.NEXT_PUBLIC_STATIC_EXPORT === 'true'
 
     if (isStaticExport) {
-      const subject = encodeURIComponent(`New website lead: ${business.trim()}`)
+      const subject = encodeURIComponent(`New mockup request: ${business.trim()}`)
       const otherLines = payload.otherSocials
         .filter((item) => item.label.trim() && item.url.trim())
         .map((item) => `${item.label}: ${item.url}`)
@@ -158,8 +158,8 @@ export const LeadForm = () => {
           Request received
         </h2>
         <p className="mt-3 text-base leading-relaxed text-mute">
-          Thanks — I’ll email you the website setup tutorial and next steps
-          soon.
+          Thanks — I’ll put together a mockup based on what you shared and
+          follow up soon.
         </p>
         <button
           type="button"
@@ -430,10 +430,10 @@ export const LeadForm = () => {
         type="submit"
         className="inline-flex w-fit items-center gap-2 bg-signal px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-ink transition hover:bg-bone focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal disabled:cursor-not-allowed disabled:opacity-50"
         tabIndex={0}
-        aria-label="Submit website request"
+        aria-label="Request a mockup"
         disabled={status === 'submitting'}
       >
-        {status === 'submitting' ? 'Sending…' : 'Request the tutorial'}
+        {status === 'submitting' ? 'Sending…' : 'Request a mockup'}
       </button>
     </form>
   )
