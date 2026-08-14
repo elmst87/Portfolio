@@ -4,6 +4,8 @@ export const HERO_CLIPS = [
   'mines',
   'update',
   'nerf',
+  'generalbriefing',
+  'thepitscracker',
 ] as const
 
 export type HeroClip = (typeof HERO_CLIPS)[number]

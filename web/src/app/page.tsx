@@ -63,16 +63,6 @@ export default function HomePage() {
             >
               Contact
             </a>
-            <a
-              href="https://x.com/EndlessUndead_"
-              className="text-white transition hover:text-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-              tabIndex={0}
-              aria-label="Endless Undead on X"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              X
-            </a>
           </div>
         </nav>
       </header>
