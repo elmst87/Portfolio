@@ -19,6 +19,9 @@ export const ProjectCard = ({project, index}: ProjectCardProps) => {
   const linkLabel = project.linkLabel || 'Visit site'
   const tags = project.tags?.filter(Boolean) ?? []
   const reverseOnDesktop = index % 2 === 1
+  const isEndlessUndead =
+    project.slug?.current === 'endless-undead' ||
+    (project.title ?? '').toLowerCase().includes('endless undead')
 
   return (
     <article
@@ -60,18 +63,35 @@ export const ProjectCard = ({project, index}: ProjectCardProps) => {
             ))}
           </ul>
         ) : null}
-        {project.url ? (
-          <a
-            href={project.url}
-            className={`mt-8 inline-flex items-center gap-2 border-b pb-1 text-sm font-semibold uppercase tracking-[0.14em] transition hover:border-bone hover:text-bone focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${accentClass}`}
-            tabIndex={0}
-            aria-label={`${linkLabel}: ${project.title}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {linkLabel}
-            <span aria-hidden="true">↗</span>
-          </a>
+        {project.url || isEndlessUndead ? (
+          <div className="mt-8 flex flex-wrap items-center gap-6">
+            {project.url ? (
+              <a
+                href={project.url}
+                className={`inline-flex items-center gap-2 border-b pb-1 text-sm font-semibold uppercase tracking-[0.14em] transition hover:border-bone hover:text-bone focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 ${accentClass}`}
+                tabIndex={0}
+                aria-label={`${linkLabel}: ${project.title}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {linkLabel}
+                <span aria-hidden="true">↗</span>
+              </a>
+            ) : null}
+            {isEndlessUndead ? (
+              <a
+                href="https://x.com/EndlessUndead_"
+                className="inline-flex items-center gap-2 border-b border-bone/30 pb-1 text-sm font-semibold uppercase tracking-[0.14em] transition hover:border-signal hover:text-signal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
+                tabIndex={0}
+                aria-label="Endless Undead on X"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Endless Undead on X
+                <span aria-hidden="true">↗</span>
+              </a>
+            ) : null}
+          </div>
         ) : null}
       </div>
 

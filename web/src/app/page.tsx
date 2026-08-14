@@ -86,7 +86,7 @@ export default function HomePage() {
 
           <div className="relative mx-auto w-full max-w-7xl">
             <p className="mb-6 animate-rise font-mono text-xs uppercase tracking-[0.28em] text-mute">
-              Indie builder · Games &amp; tools
+              Web dev - indie game dev
             </p>
             <h1
               id="hero-name"
@@ -115,16 +115,6 @@ export default function HomePage() {
                 rel="noopener noreferrer"
               >
                 Play Endless Undead
-              </a>
-              <a
-                href="https://x.com/EndlessUndead_"
-                className="font-mono text-xs uppercase tracking-[0.18em] text-mute underline-offset-4 transition hover:text-signal hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-signal"
-                tabIndex={0}
-                aria-label="Endless Undead on X"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Endless Undead on X
               </a>
             </div>
             <div
